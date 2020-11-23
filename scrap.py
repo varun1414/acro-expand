@@ -2,7 +2,9 @@ import bs4
 import requests
 import re
 from filter import sep_upper
-import json
+
+from replace import replace_acro
+
 
 extract = bs4.BeautifulSoup(requests.get('https://www.verywellfamily.com/the-secret-language-of-teens-100-social-media-acronyms-2609651').content, 'html.parser')
 elems = extract.select('strong')
@@ -20,14 +22,5 @@ uncomment following to see web scarpping part
 """
 # sep_upper(un_array)
 
-def replace_acro(acro):
-    with open("main_final.json", "r") as read_file:
-        data = json.load(read_file)
-    
-    if acro in data:
-        return data[acro]
-    else:
-        return -1
 
-
-print(replace_acro('gal'))
+print(replace_acro('lol'))
