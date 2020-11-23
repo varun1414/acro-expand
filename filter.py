@@ -2,6 +2,7 @@ import bs4
 import requests
 import re
 import json
+from collections import OrderedDict 
 
 def lut(acr,ext):
     arr=dict(zip(acr,ext))
@@ -63,4 +64,4 @@ def sep_upper(arr):
             acr[key]=l[0]
 
     lut_arr=lut(acr,ext)
-    jdump(lut_arr)
+    jdump(OrderedDict(sorted(lut_arr.items())))

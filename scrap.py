@@ -20,7 +20,6 @@ un_array=un_string.split('-')
 """ 
 uncomment following to see web scarpping part 
 """
-# sep_upper(un_array)
+sep_upper(un_array)
 
 
-print(replace_acro('lol'))
