@@ -23,4 +23,3 @@ uncomment following to see web scarpping part
 # sep_upper(un_array)
 
 
-print(replace_acro('lol'))
